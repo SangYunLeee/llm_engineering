@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build:
+      context: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    working_dir: /app
+    container_name: llm-jupyter
+
